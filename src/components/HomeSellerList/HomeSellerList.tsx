@@ -1,7 +1,7 @@
 
 import React from 'react'
 import Card from '../Card/Card'
-import { homeProduct } from '@/Utils/helper/helper'
+
 import { useWearHook } from '@/Context/Context'
 
 

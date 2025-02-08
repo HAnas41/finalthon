@@ -2,7 +2,7 @@
 import { paginButton } from '@/Utils/helper/helper';
 // import { paginButton } from '@/utils/Helper/helper';
 import Cookies from "js-cookie";
-import { Address, CartAction, CartDec, CartListType, ContextType, InitialCartData, InitialProdData, Product, ProductAction, Rate, ReviewList, ShipmentInpCheck,TrackingData, trackingObjType } from '@/Utils/Type/type';
+import { Address, CartAction, CartDec, CartListType, ContextType, InitialCartData, InitialProdData, Product, ProductAction, Rate, ShipmentInpCheck,TrackingData, trackingObjType } from '@/Utils/Type/type';
 import { toast } from "react-toastify";
 import { useRouter, useSearchParams } from 'next/navigation';
 import React, { ChangeEvent, createContext, FormEvent, ReactNode, useCallback, useContext, useEffect, useReducer, useState } from 'react';
@@ -98,8 +98,8 @@ function Context({children}:{children:ReactNode}) {
      const navigRoute = useRouter();
      //ADD COLOR ON WISHLIST ICON
 const [colr,setColr] = useState<boolean>(false);
-//REVIEW LIST OF EACH PRODUCT
-const [reviewList,setReviewList] = useState<ReviewList[]>([]);
+// //REVIEW LIST OF EACH PRODUCT
+// const [reviewList,setReviewList] = useState<ReviewList[]>([]);
 //HANDLE SHIPMENT INPUT
 const [shipmentInp,setShipmentInp] = useState<Address>({
   name: "",
@@ -129,7 +129,7 @@ const [rateList, setRatesList] = useState<Rate[]>([]);
 
   
 
-  const [signupAlert,setSignUpAlert] = useState(false);
+  // const [signupAlert,setSignUpAlert] = useState(false);
     //TOGGLE NAVBAR
     const onHandleNav = () => {
         setNavTogg((prev) => !prev);
@@ -825,7 +825,7 @@ useEffect(() => {
   const filtPopCategory = prodData.backupList.filter((e,i) => i<=0 && i<=3 );
   console.log(filtPopCategory)
   return (
-    <EcomContext.Provider value={{navTogg,onHandleNav,productList,backupList,page,paginationOperate,uniqueTypes,onFilterForm,onHandleSelectBox,selectValue,filtPopCategory,handleSearchValue,searchValue,handleToggSearch,searchTogg,onHandleSearchForm,cartAlert,emptyAlert,cartData,onProdDec,onProdInc,setProdColor,setProdSize,addToCart,addProdDec,addProdInc,cartDeleteItem,clearCart,cartOperate,addWishList,colr,delWishList,onHandleCheckout,onProductDetail,onHandleShipmentForm,onHandleShipmentInp,shipmentInp,rateList,handleRate,rateId,onCreatingLabel,trackingObj,labelPdf,loading,shipError,onHandleTrack,onSubmitTracking,labelId,trackError,trackingData,signupAlert}}>{children}</EcomContext.Provider>
+    <EcomContext.Provider value={{navTogg,onHandleNav,productList,backupList,page,paginationOperate,uniqueTypes,onFilterForm,onHandleSelectBox,selectValue,filtPopCategory,handleSearchValue,searchValue,handleToggSearch,searchTogg,onHandleSearchForm,cartAlert,emptyAlert,cartData,onProdDec,onProdInc,setProdColor,setProdSize,addToCart,addProdDec,addProdInc,cartDeleteItem,clearCart,cartOperate,addWishList,colr,delWishList,onHandleCheckout,onProductDetail,onHandleShipmentForm,onHandleShipmentInp,shipmentInp,rateList,handleRate,rateId,onCreatingLabel,trackingObj,labelPdf,loading,shipError,onHandleTrack,onSubmitTracking,labelId,trackError,trackingData}}>{children}</EcomContext.Provider>
   )
 }
 

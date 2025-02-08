@@ -2,7 +2,7 @@
 import React from 'react'
 import ProductImg from '../ProductImg/ProductImg';
 import ProductImgContent from '../ProductImgContent/ProductImgContent';
-import { clothList, poppins } from '@/Utils/helper/helper';
+import {  poppins } from '@/Utils/helper/helper';
 import { useWearHook } from '@/Context/Context';
 
 

@@ -1,10 +1,10 @@
 'use client'
 import { poppins } from '@/Utils/helper/helper';
-// import { poppins, rubikBuble } from '@/utils/Helper/helper'
+
 import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+
 import { FcPaid } from 'react-icons/fc'
-// import { fireWorks } from '@/utils/coffetti';
+
 function SuccessPage() {
   const homeNavig = useRouter();
   return (

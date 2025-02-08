@@ -38,7 +38,6 @@ export interface ContextType{
     labelId:string;
     trackingData:TrackingData|null;
     trackError:string;
-    signupAlert:boolean;
     onProdInc: (id:string) => void;
     onProdDec: (id:string) => void;
     setProdColor: (color:string) => void;

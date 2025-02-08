@@ -3,6 +3,7 @@ import HeroHome from "@/components/HeroHome/HeroHome";
 import HomeNeural from "@/components/HomeNeural/HomeNeural";
 import HomePost from "@/components/HomePost/HomePost";
 import HomeSeller from "@/components/HomeSeller/HomeSeller";
+
 import HomeSummer from "@/components/HomeSummer/HomeSummer";
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
    <main>
     <HeroHome/>
     <HeroCollection/>
-    {/* <HomeSeller/> */}
+    <HomeSeller/>
     <HomeSummer/>
     <HomeNeural/>
     <HomePost/>
