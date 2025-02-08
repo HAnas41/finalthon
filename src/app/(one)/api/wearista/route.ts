@@ -2,11 +2,11 @@ import { client } from "@/sanity/lib/client";
 import { NextRequest, NextResponse } from "next/server";
 
 // CORS middleware function
-// function setCorsHeaders(response: NextResponse) {
-//   response.headers.set("Access-Control-Allow-Origin", process.env.NEXT_PUBLIC_FABRIC as string); // Allow all origins (update as per your requirement)
-//   response.headers.set("Access-Control-Allow-Methods", "GET, OPTIONS");
-//   response.headers.set("Access-Control-Allow-Headers", "Content-Type");
-// }
+function setCorsHeaders(response: NextResponse) {
+  response.headers.set("Access-Control-Allow-Origin", process.env.NEXT_PUBLIC_WEARISTA as string); // Allow all origins (update as per your requirement)
+  response.headers.set("Access-Control-Allow-Methods", "GET, OPTIONS");
+  response.headers.set("Access-Control-Allow-Headers", "Content-Type");
+}
 
 
 
@@ -41,7 +41,7 @@ export async function GET(req: NextRequest) {
 
     // Create a response and set CORS headers
     const response = NextResponse.json(clothBuck, { status: 200 });
-    
+    setCorsHeaders(response);
     return response;
   } catch (error) {
     // Handle errors with CORS headers
@@ -49,7 +49,14 @@ export async function GET(req: NextRequest) {
       { error: `${error} : failed to fetch the products` },
       { status: 500 }
     );
+    setCorsHeaders(errorResponse);
     return errorResponse;
   }
 }
 
+// Handle OPTIONS method for preflight requests
+export async function OPTIONS() {
+  const response = NextResponse.json(null, { status: 204 });
+  setCorsHeaders(response);
+  return response;
+}
