@@ -11,14 +11,14 @@ function HeaderIcon() {
       width={10}
       />
       <div className='flex gap-1 items-center'>
-      <Image className="size-4" src='/images/Vector (4).png' alt="cart"
+      <Image className="size-4" src='/images/Vector (4).webp' alt="cart"
       height={10}
       width={10}
       />
       <p>1</p>
       </div>
       <div className='flex gap-1 items-center'>
-      <Image className="size-4" src='/images/Vector (5).png' alt="wishlist"
+      <Image className="size-4" src='/images/Vector (5).webp' alt="wishlist"
       height={10}
       width={10}
       />
