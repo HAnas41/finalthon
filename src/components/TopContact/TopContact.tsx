@@ -12,7 +12,7 @@ function TopContact() {
       </div>
       <div className='flex items-center gap-2 max-[600px]:hidden'>
       <CiMail />
-      <p>bandage@gmail.com</p>
+      <p>Wearista@gmail.com</p>
       </div>
     </address>
   )
